@@ -1,4 +1,5 @@
 import Button from "./Button"
+import CartWidged from "./CartWidged"
 
 export default function NavBar() {
 
@@ -10,6 +11,7 @@ export default function NavBar() {
         <Button  text='Venta Telefonica'/> 
         <Button  text='Sucursales'/> 
         <Button  text='Contactos'/>
+        <CartWidged />
         </div>
     </>
     )

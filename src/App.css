@@ -3,7 +3,31 @@
 .App {
   text-align: center;
 }
-
+.marcanav{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 60px;
+  font: italic;
+  color: blue;
+}
+.imgnav{
+  width: 15%;
+  height: 100%;
+}
+.imgcar{
+  width: 10%;
+  height: 100%;
+}
+.top{
+  width: 100%;
+  display: flex;
+  background-color:darkgray;
+}
+.btn-nav{
+  padding:2px;
+  height: 37px;
+  margin-right: 3px;
+  width: auto;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

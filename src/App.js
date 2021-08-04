@@ -1,11 +1,18 @@
 import './App.css'
 import NavBar from './components/NavBar';
-import Top from './components/Top';
+import ItemListContainer from './components/ItemListContainer';
+
 function App() {
   return (
     <>
-    <Top />
-    <NavBar />
+      <div className='top'>
+        <img className='imgnav' src='latiendita.png' alt=""></img>
+        <div>
+            <span className='marcanav' >La Tiendita AJN</span>
+            <NavBar />
+            <ItemListContainer saludos='Holitas!!!' />
+        </div>  
+    </div>
     </>
   );
 }
