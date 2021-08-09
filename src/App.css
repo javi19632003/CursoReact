@@ -7,7 +7,7 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 60px;
   font: italic;
-  color: blue;
+  color: rgb(147, 218, 185);
 }
 .imgnav{
   width: 15%;
@@ -31,6 +31,36 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.enlinea {
+  padding: 5px;
+  display:inline-flex;
+}
+
+.btn1 {
+  background-color: beige;
+  width: 50px;
+  height: 25px;
+  color: #0099CC;
+  border: 2px solid #0099CC;
+  border-radius: 6px;
+}
+
+.divitem{
+  width: 40px;
+  height: 20px;
+  padding: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+  font: italic;
+  color: rgb(10, 10, 10);
+
+  }
+.divgral{
+  background-color: #d1d5d6;
+  width: 12%;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
