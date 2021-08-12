@@ -3,7 +3,6 @@ import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemCount from './components/ItemCount';
 
-
 function App() {
   return (
     <>
@@ -17,6 +16,7 @@ function App() {
     
     <ItemListContainer saludos='ItemListContainer' />
     <ItemCount stock= {5} inicial = {1} />
+    
     </>
   );
 }
