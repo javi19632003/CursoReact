@@ -5,14 +5,19 @@ export default function NavBar() {
 
     return(
         <>
-        <div>
+        <div className='col-md-2 well' >
         <Button  text='Nosotros' /> 
-        <Button  text='Productos'/> 
-        <Button  text='Venta Telefonica'/> 
-        <Button  text='Sucursales'/> 
-        <Button  text='Contactos'/>
-        <CartWidged />
         </div>
+        <div className='col-md-2 well' >
+        <Button  text='Productos'/> 
+        </div>
+        <div className='col-md-2 well' >
+        <Button  text='Sucursales'/> 
+        </div>
+        <div className='col-md-2 well' >
+        <Button  text='Contactos'/>
+        </div>
+        <CartWidged />
     </>
     )
 }

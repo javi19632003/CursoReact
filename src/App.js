@@ -6,16 +6,24 @@ import ItemCount from './components/ItemCount';
 function App() {
   return (
     <>
-      <div className='top'>
-        <img className='imgnav' src='latiendita.png' alt=""></img>
-        <div>
-            <span className='marcanav' >La Tiendita AJN</span>
+      <div className='container'>
+        <header className='page-header'>
+        <div className='row col-md-2 well'>  
+          <img className='img-fluid' src='latiendita.png' alt=""></img>        
+          <div className='col-md-2 well flex' >
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-md-2 well' >
+
+          </div>
             <NavBar />
-        </div>  
-    </div>
+        </div>   
+        </header>    
+      </div>
     
-    <ItemListContainer saludos='ItemListContainer' />
-    <ItemCount stock= {5} inicial = {1} />
+    <ItemListContainer saludos='Camaras de Fotos' />
+    
     
     </>
   );

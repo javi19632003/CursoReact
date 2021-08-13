@@ -1,8 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300');
 
 
 .App {
   text-align: center;
 }
+
+.card{
+  box-shadow: 0 6px 6px rgba(#000, 0.3);
+  transition: 200ms;
+  background: #fff;
+}  
+.cardtitle{
+  display: flex;
+  align-items: center;
+  padding: 30px 40px;
+}
+.h3card{
+  flex: 0 1 200px;
+  text-align: right;
+  margin: 0;
+  color: #252525;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.iconcard{
+  flex: 1 0 10px;
+  background: #115dd8;
+  color: #fff;
+  padding: 10px 10px;
+  transition: 200ms;
+}
+   
+
 .marcanav{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 60px;
@@ -17,6 +48,10 @@
   width: 10%;
   height: 100%;
 }
+.xxx{
+  margin-left: 16px;
+}
+
 .top{
   width: 100%;
   display: flex;
@@ -34,6 +69,7 @@
 }
 
 .enlinea {
+  
   padding: 5px;
   display:inline-flex;
 }

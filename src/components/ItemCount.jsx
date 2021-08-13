@@ -25,18 +25,13 @@ export default function ItemCount({stock = 0, inicial = 0 , onAdd = () =>{} }) {
 
     return (
         <>
-            <div className ='divgral'>
-            <div>
-                <p>Camisa linda </p>
-            </div>
-            <div className = 'enlinea'>
+            <div className='enlinea' >
                 <button  className = 'btn btn-dark' onClick={() => sumo()}>+</button>
                 <div className = 'divitem'>{cantArti}</div>
                 <button className = 'btn btn-dark' onClick={() => resto()}>-</button>
             </div>
             <div >
                 <button  className = 'btn btn-primary btn-sm'> Agregar a Carrito</button>
-            </div>
             </div>
         </>
     )
