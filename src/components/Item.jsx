@@ -1,12 +1,17 @@
-import ItemCount from "./ItemCount";
 
-export default function Item({desc, preuni}) {
-    console.log("entré en Item");
+
+export default function Item({desc, preuni, urlfoto}) {
+    const currency = function(number){
+        return new Intl.NumberFormat('en-IN', {style: 'currency',currency: 'INR', minimumFractionDigits: 2}).format(number);
+    };
+ 
     return (
         <>
-            <div> { desc } </div>
-            <div> { preuni } </div>
-            <ItemCount stock= {5} inicial = {1} />
+        <div className='enlinea'>
+            <img className='img1'  src= { urlfoto } alt=""></img>
+            <div className='txtitem'> { desc } </div>
+            <div className='txtprecio'>  { currency(preuni) } </div>
+        </div>    
         </>
     )
 }

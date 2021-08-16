@@ -11,13 +11,13 @@ const mokArticu = [
   },
   {
     id: '2',
-    desc: 'Cámara full-frame a9 II con capacidad profesional - | ILCE-9M2/B E38',
+    desc: 'Cámara full-frame a9 II ',
     preuni: 100.50,
     urlfoto: './img/camara2.png'
   },
   {
     id: '3',
-    desc: 'Cámara APS-C a6100 con enfoque automático rápido',
+    desc: 'Cámara APS-C a6100 ',
     preuni: 1523.15,
     urlfoto: './img/camara3.png'
   },
@@ -29,13 +29,13 @@ const mokArticu = [
   },
   {
     id: '5',
-    desc: 'a1 con una resolución y velocidad superiores',
+    desc: 'Cámara a1',
     preuni: 3560.00,
     urlfoto: './img/camara5.png'
   },
   {
     id: '6',
-    desc: 'Cámara RX100 III avanzada con sensor tipo 1.0',
+    desc: 'Cámara RX100 III ',
     preuni: 4530,
     urlfoto: './img/camara6.png'
   }
@@ -56,7 +56,6 @@ export default function ItemList({items}) {
         });
       }, 2000);
     }).then((data)=>{
-      console.log(data)
       setProductos(data)
     }).catch((err)=>{
       console.log(err)
@@ -66,7 +65,7 @@ export default function ItemList({items}) {
     return (
         <>
           {productos.map((producto)=>
-            <Item key= {producto.id} desc={producto.desc} preuni={producto.preuni}></Item>
+            <Item key= {producto.id} desc={producto.desc} preuni={producto.preuni} urlfoto={producto.urlfoto}></Item>
         )}
         </>
     )

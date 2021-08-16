@@ -9,7 +9,7 @@ import React, { useState } from 'react';
     }
     
     const resto = () => {
-        if (cantArti > 0) setCantArti(cantArti - 1)
+        if (cantArti > 1) setCantArti(cantArti - 1)
     }
 
     return {

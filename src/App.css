@@ -1,75 +1,51 @@
-@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300');
-
-
 .App {
   text-align: center;
 }
 
-.card{
-  box-shadow: 0 6px 6px rgba(#000, 0.3);
-  transition: 200ms;
-  background: #fff;
-}  
-.cardtitle{
-  display: flex;
-  align-items: center;
-  padding: 30px 40px;
-}
-.h3card{
-  flex: 0 1 200px;
-  text-align: right;
-  margin: 0;
-  color: #252525;
-  font-family: sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-.iconcard{
-  flex: 1 0 10px;
-  background: #115dd8;
-  color: #fff;
-  padding: 10px 10px;
-  transition: 200ms;
-}
-   
-
-.marcanav{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 60px;
-  font: italic;
-  color: rgb(147, 218, 185);
-}
-.imgnav{
-  width: 15%;
-  height: 100%;
-}
-.imgcar{
-  width: 10%;
-  height: 100%;
-}
-.xxx{
-  margin-left: 16px;
+.imgitem{
+  background-color:burlywood;
+  width: 400px;
+  height: 300px;
 }
 
-.top{
-  width: 100%;
-  display: flex;
-  background-color:darkgray;
+.caracitem{
+ margin-left: 10px;
+ padding: 30px;
+ text-align: center;
 }
-.btn-nav{
-  padding:2px;
-  height: 37px;
-  margin-right: 3px;
-  width: auto;
+.itemcant{
+  margin-left: 5px;
+  width: 1000px;
+  background-color: chocolate;
+  padding: 30px;
 }
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ .descitem{
+  background-color: rgb(135, 173, 222);
+  width: 600px;
+  height: 300px;
+  font: Arial;
+  font-size:26px;
+  font-style: italic;
+  text-align: center;
 }
-
+.txtitem{
+  margin-left: 10px;
+  font: Arial;
+  font-size:24px;
+  font-style: italic;
+}
+.txtprecio{
+  margin-left: 10px;
+  padding-left: 10px;
+  font: Arial;
+  font-size:20px;
+  color: brown;
+}
+.img1{
+  width: 20%;
+  }
 .enlinea {
-  
+  align-items: center;
   padding: 5px;
   display:inline-flex;
 }
