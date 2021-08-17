@@ -56,9 +56,10 @@ const mokArticu = [
    // acá vamos a entrar cuando haga un click en un Item de Itenlist para seleccionar
   // y mostrarnos por medio de ItemDetail toda la información del producto. 
 
-export default function ItemDetailContarner(id) {
+export default function ItemDetailContarner({id}) {
 
-    console.log(id);
+    //console.log(id);
+  
     const [unProdu, setunProdu] = useState([]);
     
    
@@ -76,11 +77,11 @@ export default function ItemDetailContarner(id) {
     };
 
   useEffect(() => {  
-    const mipromesa = getItem('1');
+    const mipromesa =  getItem(id);
     mipromesa.then(result => {
-      console.log(result);
+     // console.log(result);
       setunProdu(result)}).catch(err => console.log(err));
-  },[])
+  },[id])
  
    return( 
     <>  

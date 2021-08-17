@@ -21,8 +21,8 @@ function App() {
         </header>    
       </div>
     
-    {/*<ItemListContainer saludos='Camaras de Fotos' />*/}
-    <ItemDetailContainer id = "2" />
+    <ItemListContainer saludos='Camaras de Fotos' />
+    <ItemDetailContainer id = "3" />
     
     </>
   );
