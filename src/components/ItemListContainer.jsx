@@ -1,14 +1,18 @@
 import ItemList from "./ItemList";
+import NavBar from './NavBar';
+import ItemDetailContainer from './ItemDetailContainer';
 
-
-
-export default function ItemListContainer({ saludos }) {
+export default function ItemListContainer({ titulo }) {
     return( 
     <>  
-        <div className='col-md-8 well'> 
-            <h1>{saludos}</h1> 
+        <div className="enlinea">
+            <img src='./latiendita.png' alt='' />
+            <h1>{titulo}</h1> 
+        </div>
+        <div > 
         </div> 
         <ItemList />
+        <ItemDetailContainer id = "3" />
     </>
     )
 }
