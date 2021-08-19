@@ -1,7 +1,7 @@
 import './App.css'
 import ItemListContainer from './components/ItemListContainer';
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
-import NavBar from './components/NavBar';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 
 function App() {
   return (
@@ -9,7 +9,10 @@ function App() {
       <BrowserRouter>
         <div className='App'>
           <Switch>
-            <Route path='/'>
+            <Route path='/' exact>
+              <ItemListContainer titulo = 'Tienda de Camaras de Fotos' />
+            </Route>
+            <Route path='/:cate/:id' exact>
               <ItemListContainer titulo = 'Tienda de Camaras de Fotos' />
             </Route>
           </Switch>

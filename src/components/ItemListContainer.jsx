@@ -1,8 +1,9 @@
 import ItemList from "./ItemList";
-import NavBar from './NavBar';
 import ItemDetailContainer from './ItemDetailContainer';
 
 export default function ItemListContainer({ titulo }) {
+  
+    
     return( 
     <>  
         <div className="enlinea">

@@ -1,6 +1,6 @@
 
 import Item from "./Item";
-import react, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import mokArticu from "../data/mokArticu";
 
 
@@ -30,7 +30,7 @@ export default function ItemList({items}) {
         <>
           {cargando ? <h2>Cargando los Productos ....</h2> :
            productos.map((producto)=>
-            <Item key= {producto.id} desc={producto.desc} preuni={producto.preuni} urlfoto={producto.urlfoto}></Item>
+            <Item key= {producto.id} desc={producto.desc} preuni={producto.preuni} urlfoto={producto.urlfoto} cate={producto.cate} id={producto.id}></Item>
         )}
         </>
     )
