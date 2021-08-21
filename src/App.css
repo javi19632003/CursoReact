@@ -3,6 +3,7 @@
 }
 
 .imgitem{
+  display: flex;
   background-color:burlywood;
   width: 400px;
   height: 300px;

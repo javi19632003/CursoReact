@@ -1,0 +1,11 @@
+                                           APP.JS
+
+                                    ItemListContainer.jsx
+
+         ItemList                                                   ItemDetailContainer
+      (Selecciona todos y                                        (Selecciona un solo producto 
+       muestra Item)                                              y lo muestra con ItemDetail)
+
+
+            Item                                                     ItemDetail
+

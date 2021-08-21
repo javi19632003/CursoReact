@@ -9,13 +9,13 @@ export default function NavBar() {
         <Button  text='Home' milink="/" /> 
         </div>
         <div className='col-md-2 well' >
-        <Button  text='Auto-Foco' milink="Auto-Foco"/> 
+        <Button  text='Auto-Foco' milink="/Auto-Foco"/> 
         </div>
         <div className='col-md-2 well' >
-        <Button  text='Combos'  milink="Combos"/> 
+        <Button  text='Combos'  milink="/Combos"/> 
         </div>
         <div className='col-md-2 well' >
-        <Button  text='Full-Frame'  milink="Full-Frame"/>
+        <Button  text='Full-Frame'  milink="/Full-Frame"/>
         </div>
         <CartWidged />
     </>

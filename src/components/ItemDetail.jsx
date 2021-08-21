@@ -7,7 +7,7 @@ export default function ItemDetail({desc, preuni, urlfoto, caract, stk}) {
     <>  
         <div>
             <div className='impitem'>
-            <img className='img-fluid' src= { urlfoto } alt=""></img>
+            <img className='img-fluid' src= { '.'+urlfoto } alt=""></img>
             </div>
             <div> { desc } </div>
             <div> { preuni } </div>

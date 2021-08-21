@@ -2,12 +2,14 @@
 import Item from "./Item";
 import { useState, useEffect } from "react";
 import mokArticu from "../data/mokArticu";
+import { useParams } from "react-router-dom";
 
 
 export default function ItemList({items}) {
 
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
+  const { cate } = useParams()
 
   useEffect(() => {
     console.log('Esperamos que responda ....');
@@ -19,12 +21,18 @@ export default function ItemList({items}) {
         });
       }, 2000);
     }).then((data)=>{
-      setProductos(data)
-      setCargando(false)
+      if(cate != null){
+        const filtro=data.filter((producto)=> producto.cate === cate)
+        setProductos(filtro)
+        setCargando(false)
+      } else {
+        setProductos(data)
+        setCargando(false)
+      }
     }).catch((err)=>{
       console.log(err)
     });
-  },[])
+  },[cate])
   
     return (
         <>

@@ -2,15 +2,16 @@
 import  { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import mokArticu from "../data/mokArticu";
+import { useParams } from "react-router-dom";
 
 
 // acá vamos a entrar cuando haga un click en un Item de Itenlist para seleccionar
   // y mostrarnos por medio de ItemDetail toda la información del producto. 
 
-export default function ItemDetailContarner({id}) {
+export default function ItemDetailContarner() {
 
-    //console.log(id);
-  
+    const { id } = useParams() 
+   
     const [unProdu, setunProdu] = useState([]);
     
    

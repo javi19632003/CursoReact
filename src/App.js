@@ -2,6 +2,7 @@ import './App.css'
 import ItemListContainer from './components/ItemListContainer';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import NavBar from './components/NavBar';
+import ItemList from './components/ItemList';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
           <Switch>
             <Route path='/' exact>
               <ItemListContainer titulo = 'Camaras de Fotos' />
+            </Route>
+            <Route path='/:cate' exact>
+              <ItemList />
             </Route>
             <Route path='/:cate/:id' exact>
               <ItemListContainer titulo = '** Camaras de Fotos' />
