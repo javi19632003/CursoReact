@@ -1,19 +1,24 @@
 import ItemList from "./ItemList";
 import ItemDetailContainer from './ItemDetailContainer';
+import { useParams,  Route } from "react-router";
+
 
 export default function ItemListContainer({ titulo }) {
   
-    
+       const { cate, id } = useParams() 
+       console.log(cate)
+       console.log(id)
+   
     return( 
     <>  
-        <div className="enlinea">
-            <img src='./latiendita.png' alt='' />
-            <h1>{titulo}</h1> 
-        </div>
         <div > 
         </div> 
-        <ItemList />
-        <ItemDetailContainer id = "3" />
+            <ItemList />
+ 
+        <Route path='/:cate/:id' exact>
+            <ItemDetailContainer />
+        </Route>
+
     </>
     )
 }

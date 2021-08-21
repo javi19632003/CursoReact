@@ -6,16 +6,16 @@ export default function NavBar() {
     return(
         <>
         <div className='col-md-2 well' >
-        <Button  text='Nosotros' /> 
+        <Button  text='Home' milink="/" /> 
         </div>
         <div className='col-md-2 well' >
-        <Button  text='Productos'/> 
+        <Button  text='Auto-Foco' milink="Auto-Foco"/> 
         </div>
         <div className='col-md-2 well' >
-        <Button  text='Sucursales'/> 
+        <Button  text='Combos'  milink="Combos"/> 
         </div>
         <div className='col-md-2 well' >
-        <Button  text='Contactos'/>
+        <Button  text='Full-Frame'  milink="Full-Frame"/>
         </div>
         <CartWidged />
     </>
