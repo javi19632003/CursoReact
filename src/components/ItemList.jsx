@@ -21,11 +21,13 @@ export default function ItemList({items}) {
         });
       }, 2000);
     }).then((data)=>{
-      if(cate != null){
+      if(cate !== null && cate !== undefined ){
+        
         const filtro=data.filter((producto)=> producto.cate === cate)
         setProductos(filtro)
         setCargando(false)
       } else {
+        
         setProductos(data)
         setCargando(false)
       }

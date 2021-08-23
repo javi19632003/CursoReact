@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
   const useItemCount = (stock = 0, inicial = 0 )  =>{
     
     const [cantArti, setCantArti] = useState(inicial)
@@ -23,6 +24,7 @@ export default function ItemCount({stock = 0, inicial = 1 , onAdd = () =>{} }) {
 
     const {cantArti, sumo, resto} = useItemCount(stock, inicial) 
 
+
     return (
         <>
             <div className='enlinea' >
@@ -31,7 +33,7 @@ export default function ItemCount({stock = 0, inicial = 1 , onAdd = () =>{} }) {
                 <button className = 'btn btn-dark' onClick={() => resto()} >-</button>
             </div>
             <div >
-                <button  className = 'btn btn-primary btn-sm'> Agregar a Carrito</button>
+                <button onClick={()=> onAdd(cantArti)} className = 'btn btn-primary btn-sm'> Agregar a Carrito</button>
             </div>
         </>
     )
