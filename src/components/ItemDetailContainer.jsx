@@ -13,7 +13,7 @@ export default function ItemDetailContarner() {
     const { id } = useParams() 
    
     const [unProdu, setunProdu] = useState([]);
-    
+    const [cargando, setCargando] = useState(true);
    
 
        const getItem = (id = null) => {
@@ -32,12 +32,16 @@ export default function ItemDetailContarner() {
     const mipromesa =  getItem(id);
     mipromesa.then(result => {
      // console.log(result);
-      setunProdu(result)}).catch(err => console.log(err));
-  },[id])
+      setunProdu(result)
+      setCargando(false)
+      }).catch(err => console.log(err));
+  },[id, unProdu])
  
    return( 
     <>  
+      {cargando ? <div>Cargando producto</div> :
        <ItemDetail key= {unProdu.id} desc={unProdu.desc} preuni={unProdu.preuni} urlfoto={unProdu.urlfoto} caract={unProdu.caract} stk={unProdu.stk}> </ItemDetail>
+      }
     </>
     )
 }
