@@ -13,12 +13,9 @@ export default function CartContext({ defaultCart= {}, children }) {
 
 
   const addItem = (idArt, nomArt, cantidad) => {
-    let aux = [];
-    cart.id  = idArt;
-    cart.nom = nomArt;
-    cart.quantity = cantidad;
-    aux.push({cart: cart});
-    console.log(cart);
+
+    console.log(idArt, nomArt, cantidad);
+    setCart([...cart, {idArt,nomArt,cantidad}])
 
 };
   

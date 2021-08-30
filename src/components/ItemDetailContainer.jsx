@@ -41,9 +41,7 @@ export default function ItemDetailContarner() {
    return( 
     <>  
       {cargando ? <div>Cargando producto</div> :
-       <CartContext>
        <ItemDetail key= {unProdu.id} desc={unProdu.desc} preuni={unProdu.preuni} urlfoto={unProdu.urlfoto} caract={unProdu.caract} stk={unProdu.stk}> </ItemDetail>
-       </CartContext>
       }
     </>
     )
