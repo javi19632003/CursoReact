@@ -3,6 +3,7 @@ import  { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import mokArticu from "../data/mokArticu";
 import { useParams } from "react-router-dom";
+import CartContext from "../context/CartContext";
 
 
 // acá vamos a entrar cuando haga un click en un Item de Itenlist para seleccionar
@@ -40,7 +41,9 @@ export default function ItemDetailContarner() {
    return( 
     <>  
       {cargando ? <div>Cargando producto</div> :
+       <CartContext>
        <ItemDetail key= {unProdu.id} desc={unProdu.desc} preuni={unProdu.preuni} urlfoto={unProdu.urlfoto} caract={unProdu.caract} stk={unProdu.stk}> </ItemDetail>
+       </CartContext>
       }
     </>
     )

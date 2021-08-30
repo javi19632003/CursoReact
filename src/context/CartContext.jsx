@@ -1,19 +1,24 @@
 
 import React, { useState } from 'react';
 
+
+/*const defaultCart = {
+  item: {}
+};*/
 export const Context = React.createContext();
 
-const defaultCart = {
-  item: {},
-  cantidad: 0
-};
-
-export default function CartContext({ children }) {
+export default function CartContext({ defaultCart= {}, children }) {
   const [cart, setCart] = useState(defaultCart);
 
 
-  const addItem = (item, cantidad) => {
-  
+  const addItem = (idArt, nomArt, cantidad) => {
+    let aux = [];
+    cart.id  = idArt;
+    cart.nom = nomArt;
+    cart.quantity = cantidad;
+    aux.push({cart: cart});
+    console.log(cart);
+
 };
   
   const removeItem = (id) => {
@@ -21,7 +26,7 @@ export default function CartContext({ children }) {
 };
 
 const clear = () => {
-    setCart(defaultCart)
+    setCart({})
 };
 
 const isInCart = (id) => {
