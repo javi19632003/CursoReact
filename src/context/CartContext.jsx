@@ -8,6 +8,7 @@ import React, { useState } from 'react';
 export const Context = React.createContext();
 
 export default function CartContext({ defaultCart= {}, children }) {
+ 
   const [cart, setCart] = useState(defaultCart);
 
 
