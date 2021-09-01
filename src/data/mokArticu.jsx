@@ -2,7 +2,7 @@
 
 const mokArticu = [
     {
-      id: '1',
+      id: 'id_1',
       desc: 'Cámara compacta full-frame Alpha 7C',
       cate: 'Full-Frame',
       preuni: 5230,
@@ -11,7 +11,7 @@ const mokArticu = [
       caract: 'La cámara compacta full-frame Alpha 7C es linda y bla bla bla bla' 
     },
     {
-      id: '2',
+      id: 'id_2',
       desc: 'Cámara full-frame a9 II con capacidad profesional - | ILCE-9M2/B E38',
       cate: 'Full-Frame',
       preuni: 100.50,
@@ -20,7 +20,7 @@ const mokArticu = [
       caract: 'La Cámara full-frame a9 II con capacidad profesional es el mejor amigo del  bla bla bla bla' 
     },
     {
-      id: '3',
+      id: 'id_3',
       desc: 'Cámara APS-C a6100 con enfoque automático rápido',
       cate: 'Auto-Foco',
       preuni: 1523.15,
@@ -29,7 +29,7 @@ const mokArticu = [
       caract: 'La Cámara APS-C a6100 con enfoque automático rápido permite realizar bla bla bla bla' 
     },
     {
-      id: '4',
+      id: 'id_4',
       desc: 'Cámara a6400 + SELP18105G',
       cate: 'Combos',
       preuni: 6000.00,
@@ -38,7 +38,7 @@ const mokArticu = [
       caract: 'La Cámara a6400  y su lente SELP18105G son el complemento ideal para bla bla bla bla' 
     },
     {
-      id: '5',
+      id: 'id_5',
       desc: 'a1 con una resolución y velocidad superiores',
       cate: 'Combos',
       preuni: 3560.00,
@@ -47,7 +47,7 @@ const mokArticu = [
       caract: 'La cámara a1 es linda y bla bla bla bla' 
     },
     {
-      id: '6',
+      id: 'id_6',
       desc: 'Cámara RX100 III avanzada con sensor tipo 1.0',
       cate: 'Auto-Foco',
       preuni: 4530,

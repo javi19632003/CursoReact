@@ -6,8 +6,7 @@ import  { Link } from "react-router-dom"
 import Cart from "./Cart";
 import { Context } from "../context/CartContext";
 
-
-export default function ItemDetail({desc, preuni, urlfoto, caract, stk}) {
+export default function ItemDetail({desc, preuni, urlfoto, caract, stk, id}) {
    
    const [agregoCant, setAgregoCant] = useState(0)
    const [ItemCountVisible, setItemCountVisible] = useState(true)
@@ -16,15 +15,13 @@ export default function ItemDetail({desc, preuni, urlfoto, caract, stk}) {
 
    const datoContexto = useContext(Context)
 
-   /*const {addItem} = useContext(Context)*/
-   
    const agregar = (cantArti) => {
 
-        setAgregoCant(cantArti)
-        setItemCountVisible(false)
-        setFinalCompra(true)   
-        console.log(datoContexto)
-        datoContexto.addItem("1","trolo",cantArti)
+    setAgregoCant(cantArti)
+   
+    setItemCountVisible(false)
+    setFinalCompra(true)   
+    datoContexto.addItem(id,desc,agregoCant)
    } 
 
    const iraCart = () => {

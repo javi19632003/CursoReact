@@ -41,7 +41,7 @@ export default function ItemDetailContarner() {
    return( 
     <>  
       {cargando ? <div>Cargando producto</div> :
-       <ItemDetail key= {unProdu.id} desc={unProdu.desc} preuni={unProdu.preuni} urlfoto={unProdu.urlfoto} caract={unProdu.caract} stk={unProdu.stk}> </ItemDetail>
+       <ItemDetail key= {unProdu.id} desc={unProdu.desc} preuni={unProdu.preuni} urlfoto={unProdu.urlfoto} caract={unProdu.caract} stk={unProdu.stk} id={unProdu.id} >  </ItemDetail>
       }
     </>
     )
