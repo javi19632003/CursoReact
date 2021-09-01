@@ -16,12 +16,10 @@ export default function ItemDetail({desc, preuni, urlfoto, caract, stk, id}) {
    const datoContexto = useContext(Context)
 
    const agregar = (cantArti) => {
-
     setAgregoCant(cantArti)
-   
     setItemCountVisible(false)
     setFinalCompra(true)   
-    datoContexto.addItem(id,desc,agregoCant)
+    datoContexto.addItem(id,desc,cantArti)
    } 
 
    const iraCart = () => {

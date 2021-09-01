@@ -3,7 +3,6 @@ import  { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import mokArticu from "../data/mokArticu";
 import { useParams } from "react-router-dom";
-import CartContext from "../context/CartContext";
 
 
 // acá vamos a entrar cuando haga un click en un Item de Itenlist para seleccionar
