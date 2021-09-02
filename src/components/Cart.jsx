@@ -9,7 +9,7 @@ export default function Cart (){
     return(
         <>
         {datoContexto.cart.map((cart)=>
-            <CartItem key= {cart.idArt} id={cart.idArt} desc ={cart.nomArt} cant={cart.cantidad} ></CartItem>)}
+            <CartItem key= {cart.idArt} id={cart.idArt} desc ={cart.nomArt} cant={cart.cantidad} preuni={cart.preuni} ></CartItem>)}
         </>
     )
 } 

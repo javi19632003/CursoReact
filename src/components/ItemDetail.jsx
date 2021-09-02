@@ -5,38 +5,39 @@ import React, { useContext, useState } from 'react';
 import  { Link } from "react-router-dom"
 import Cart from "./Cart";
 import { Context } from "../context/CartContext";
+import UnItem from "./UnItem";
 
 export default function ItemDetail({desc, preuni, urlfoto, caract, stk, id}) {
    
    const [agregoCant, setAgregoCant] = useState(0)
    const [ItemCountVisible, setItemCountVisible] = useState(true)
+   const [ItemVisible, setItemVisible] = useState(true)
    const [FinalCompra, setFinalCompra] = useState(false)
    const [irCart, setIrCart] = useState(false)
 
    const datoContexto = useContext(Context)
 
+  
    const agregar = (cantArti) => {
     setAgregoCant(cantArti)
     setItemCountVisible(false)
     setFinalCompra(true)   
-    datoContexto.addItem(id,desc,cantArti)
+    datoContexto.addItem(id,desc,cantArti, preuni)
    } 
 
    const iraCart = () => {
        setIrCart(true)
-       setFinalCompra(false)    
+       setFinalCompra(false) 
+       setItemVisible(false)   
     }
 
     return( 
     <>  
         <div>
-            <div className='impitem'>
-            <img className='img-fluid' src= { '.'+urlfoto } alt=""></img>
-            </div>
-            <div> { desc } </div>
-            <div> { preuni } </div>
-            <div> { caract } </div>
-            <div> { stk } </div>
+            {ItemVisible &&
+            <UnItem  desc = {desc} preuni = {preuni} caract = {caract} stk = {stk} urlfoto = {urlfoto}/>
+
+           }
             {ItemCountVisible && 
                  <ItemCount stock= {stk} inicial = {1} onAdd={agregar} />
             }

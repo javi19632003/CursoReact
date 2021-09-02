@@ -1,11 +1,12 @@
-export default function CartItem ({id, desc, cant}) {
+export default function CartItem ({id, desc, cant, preuni}) {
 
     return(
         <>
-            <div>
-                <p>{id}</p>
-                <p>{desc}</p>
-                <p>{cant}</p>
+            <div className='cartitem'>
+                <p className='cartitem1'>{id}</p>
+                <p className='cartitem1'>{cant}</p>
+                <p className='cartitem2'>{desc}</p>
+                <p className='cartitem1'>{preuni}</p>
             </div>
         </>
 

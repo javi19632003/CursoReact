@@ -105,3 +105,17 @@
     transform: rotate(360deg);
   }
 }
+
+.cartitem{
+  display:flex;
+  flex-wrap: wrap;
+  margin: 2rem;
+  
+}
+.cartitem1 {
+  width: 100px;
+  padding-left: 5px;
+}
+.cartitem2 {
+  width: 300px;
+}
