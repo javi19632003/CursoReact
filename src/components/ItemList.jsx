@@ -1,9 +1,8 @@
 
 import Item from "./Item";
 import { useState, useEffect } from "react";
-import mokArticu from "../data/mokArticu";
 import { useParams } from "react-router-dom";
-
+import { todos, produxcate } from "../firebase/fire"
 
 export default function ItemList({items}) {
 
@@ -11,7 +10,7 @@ export default function ItemList({items}) {
   const [cargando, setCargando] = useState(true);
   const { cate } = useParams()
 
-  useEffect(() => {
+ /* useEffect(() => {
     console.log('Esperamos que responda ....');
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -34,6 +33,31 @@ export default function ItemList({items}) {
     }).catch((err)=>{
       console.log(err)
     });
+  },[cate]) */
+  
+  useEffect(() => {
+      if(cate !== null && cate !== undefined ){
+        const items = produxcate(cate);
+        items.then((data) => {
+          const itemaux = []
+          data.forEach(item =>{
+            itemaux.push({id: item.id, desc: item.data().desc, preuni: item.data().preuni, cate: item.data().cate, urlfoto: item.data().urlfoto, caract: item.data().caract });
+          });
+            setProductos(itemaux);
+            setCargando(false);
+           }) 
+          } else {
+            const items = todos();
+            items.then((data) => {
+              const itemaux = []
+              data.forEach(item =>{
+                itemaux.push({id: item.id, desc: item.data().desc, preuni: item.data().preuni, cate: item.data().cate, urlfoto: item.data().urlfoto, caract: item.data().caract });
+              });
+                setProductos(itemaux);
+                setCargando(false);
+               }) 
+          }
+
   },[cate])
   
     return (

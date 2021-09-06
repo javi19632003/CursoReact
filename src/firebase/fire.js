@@ -1,8 +1,9 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore"
-import { collection, getDocs } from "firebase/firestore";
+import { doc, getFirestore } from "firebase/firestore"
+import { collection, getDocs, where, query } from "firebase/firestore";
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -15,14 +16,28 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 const db = getFirestore();
 
 
-// Lee los datos 
-//import { collection, getDocs } from "firebase/firestore";
+export const todos = ()  => {
+  const todos = getDocs(collection(db, "productos"));
+  return todos
+};
 
-const querySnapshot = await getDocs(collection(db, "users"));
-querySnapshot.forEach((doc) => {
-  console.log(`${doc.id} => ${doc.data()}`);
-});
+export const produxcate = (cate)  => {
+ 
+  const q0 = collection(db, "productos");
+ const q1 = query(q0, where('cate', '==', cate) ); 
+ console.log('hice q1')
+ const q2 = getDocs(q1);
+  return q2
+};
+
+export const unProducto = (id) => {
+  const uno0 = doc(db, 'productos', id);
+ console.log(uno0)
+  const uno1 = getDocs(uno0);
+
+  return uno1
+}
