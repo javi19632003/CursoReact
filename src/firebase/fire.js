@@ -2,7 +2,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { doc, getFirestore } from "firebase/firestore"
-import { collection, getDocs, where, query } from "firebase/firestore";
+import { collection, getDocs, getDoc, where, query } from "firebase/firestore";
 
 
 // Your web app's Firebase configuration
@@ -36,8 +36,7 @@ export const produxcate = (cate)  => {
 
 export const unProducto = (id) => {
   const uno0 = doc(db, 'productos', id);
- console.log(uno0)
-  const uno1 = getDocs(uno0);
-
+   const uno1 = getDoc(uno0);
+  console.log(uno1)
   return uno1
 }

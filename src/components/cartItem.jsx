@@ -1,5 +1,5 @@
 export default function CartItem ({id, desc, cant, preuni}) {
-
+ 
     return(
         <>
             <div className='cartitem'>

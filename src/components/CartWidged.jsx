@@ -4,16 +4,13 @@ import CartUnidades from './CartUnidades';
 
 export default function CartWidged() {
 
-    const {hayCarrito, cantCarrito} = useContext(Context) 
+    const {cantCarrito} = useContext(Context) 
     
-    console.log('hayCarrito widdged= ',hayCarrito )
-    
-   
     return(
         <>
         <div className='col-md-1 well' >
             <img className='img-fluid' src='carrito.svg' alt=""></img>
-            {hayCarrito && 
+            {cantCarrito !==  0 && 
               <CartUnidades unidades={cantCarrito} />
             } 
         </div>

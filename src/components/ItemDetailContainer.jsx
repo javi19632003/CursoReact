@@ -1,7 +1,6 @@
 
 import  { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
-import mokArticu from "../data/mokArticu";
 import { useParams } from "react-router-dom";
 import { unProducto} from '../firebase/fire'
 
@@ -40,17 +39,13 @@ export default function ItemDetailContarner() {
 
 
   useEffect(() => {  
-      console.log(id)
-      const items = unProducto(id);
-      items.then((data) => {
-        const itemaux = []
-        data.forEach(item =>{
-          itemaux.push({id: item.id, desc: item.data().desc, preuni: item.data().preuni, cate: item.data().cate, urlfoto: item.data().urlfoto, caract: item.data().caract });
-        });
-        setunProdu(itemaux);
+      const item = unProducto(id);
+      item.then((data) => {
+        console.log("datos: ",data.data())
+        setunProdu(data.data());
         setCargando(false);
       });
-  },[id, unProdu])
+  },[id])
  
    return( 
     <>  

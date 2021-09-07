@@ -9,7 +9,7 @@ import UnItem from "./UnItem";
 
 export default function ItemDetail({desc, preuni, urlfoto, caract, stk, id}) {
    
-   const [agregoCant, setAgregoCant] = useState(0)
+   /*const [agregoCant, setAgregoCant] = useState(0)*/
    const [ItemCountVisible, setItemCountVisible] = useState(true)
    const [ItemVisible, setItemVisible] = useState(true)
    const [FinalCompra, setFinalCompra] = useState(false)
@@ -19,7 +19,7 @@ export default function ItemDetail({desc, preuni, urlfoto, caract, stk, id}) {
 
   
    const agregar = (cantArti) => {
-    setAgregoCant(cantArti)
+    /*setAgregoCant(cantArti)*/
     setItemCountVisible(false)
     setFinalCompra(true)   
     datoContexto.addItem(id,desc,cantArti, preuni)
