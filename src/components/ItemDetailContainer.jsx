@@ -41,7 +41,6 @@ export default function ItemDetailContarner() {
   useEffect(() => {  
       const item = unProducto(id);
       item.then((data) => {
-        console.log("datos: ",data.data())
         setunProdu(data.data());
         setCargando(false);
       });
