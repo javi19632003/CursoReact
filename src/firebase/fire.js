@@ -26,10 +26,8 @@ export const todos = ()  => {
 };
 
 export const produxcate = (cate)  => {
- 
-  const q0 = collection(db, "productos");
+   const q0 = collection(db, "productos");
  const q1 = query(q0, where('cate', '==', cate) ); 
- console.log('hice q1')
  const q2 = getDocs(q1);
   return q2
 };
@@ -37,6 +35,5 @@ export const produxcate = (cate)  => {
 export const unProducto = (id) => {
   const uno0 = doc(db, 'productos', id);
    const uno1 = getDoc(uno0);
-  console.log(uno1)
   return uno1
 }

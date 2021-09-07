@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import NavBar from './components/NavBar';
 import ItemList from './components/ItemList';
 import ItemDetailContainer from './components/ItemDetailContainer';
-
+import Cart from './components/Cart';
 function App() {
   return (
     <>
@@ -22,6 +22,9 @@ function App() {
           <Switch>
             <Route path='/' exact>
               <ItemListContainer titulo = 'Camaras de Fotos' />
+            </Route>
+            <Route path='/cart' exact>
+              <Cart  />
             </Route>
             <Route path='/:cate' exact>
               <ItemList />

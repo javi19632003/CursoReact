@@ -1,6 +1,7 @@
 import Button from "./Button"
 import CartWidged from "./CartWidged"
 
+
 export default function NavBar() {
 
     return(

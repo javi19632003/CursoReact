@@ -14,7 +14,6 @@ export default function CartContext({ value = [] , children }) {
  
   const [cart, setCart] = useState(value);
   const [cantCarrito, setCantCarrito] = useState(0);
-  const [hayCarrito, setHayCarrito] = useState(false);
 
 
   const addItem = (idArt, nomArt, cantidad, preuni) => {
@@ -23,26 +22,23 @@ export default function CartContext({ value = [] , children }) {
     if(!isInCart(idArt)){
       setCart([...cart, {idArt, nomArt, cantidad, preuni}]);
       setCantCarrito(cantCarrito + 1)
-      HayItems(cantCarrito)
     } else {
       console.log("ya existe")
     }
     
-    console.log(cart);
   };
   
   const removeItem = (idArt) => {
     const remove=cart.filter(item => item.idArt !==idArt)
     setCart(remove)
     setCantCarrito(cantCarrito - 1)
-    HayItems(cantCarrito)
   };
 
 const clear = () => {
     setCart([])
     setCantCarrito(0)
-    HayItems(0)
   };
+
 
 
 const isInCart = (id) => {
@@ -56,20 +52,19 @@ const isInCart = (id) => {
   }
 };
 
-const HayItems = (cant) => {
-  if(cant === 0 ){
-      setHayCarrito(false)
-      console.log('hayCarrito= ',hayCarrito," "+cant )
-  } else {
-      setHayCarrito(true)
-      console.log('hayCarrito= ',hayCarrito," "+cant  )
-  }
+const calculoTotal = () => {
+  let total = 0
+   cart.forEach(element => { 
+       total = total + element.cantidad * element.preuni
+   });
+   return total
+};
 
-}
+
 
   return (
     <>
-      <Context.Provider value={{hayCarrito: hayCarrito, cantCarrito: cantCarrito, cart: cart, addItem: addItem, removeItem: removeItem, clear: clear, isInCart: isInCart }}>
+      <Context.Provider value={{cantCarrito: cantCarrito, cart: cart, calculoTotal: calculoTotal, addItem: addItem, removeItem: removeItem, clear: clear, isInCart: isInCart }}>
         {children}
       </Context.Provider>
     </>
