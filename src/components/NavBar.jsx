@@ -1,6 +1,5 @@
 import Button from "./Button"
 import CartWidged from "./CartWidged"
-import  { Link } from "react-router-dom"
 
 export default function NavBar() {
 
