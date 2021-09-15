@@ -2,7 +2,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { doc, getFirestore } from "firebase/firestore"
-import { collection, getDocs, getDoc, where, query } from "firebase/firestore";
+import { collection, getDocs, getDoc, where, query, setDoc } from "firebase/firestore";
 
 
 // Your web app's Firebase configuration
@@ -37,3 +37,17 @@ export const unProducto = (id) => {
    const uno1 = getDoc(uno0);
   return uno1
 }
+
+export const tomoId = (dataBase) => {
+  
+  const nuevoId = doc(collection(db, dataBase));
+  console.log ("nuevoId: ",nuevoId)
+  return nuevoId
+}
+
+export const guardoOrden = async (id, data) => {
+  await setDoc(id, data);
+ }
+
+/* 
+        */
