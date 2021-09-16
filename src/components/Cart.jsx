@@ -2,12 +2,16 @@ import React, { useContext, useState } from 'react';
 import { Context } from "../context/CartContext";
 import CartItem from "./cartItem";
 import  { Link } from "react-router-dom"
-import { tomoId, guardoOrden } from '../firebase/fire'
+import { guardoOrden } from '../firebase/fire'
 import FinalizoCompra from './FinalizoCompra';
+
+
+
+
 export default function Cart (){
-     
-    const { cart, cantCarrito, calculoTotal } = useContext(Context)
-    const [idCompra, setidCompra] = useState(" ");
+
+const { cart, cantCarrito, calculoTotal } = useContext(Context)
+    const [idCompra, setidCompra ] = useState(" ");
 
     const hacerOrden = () => {
         const nuevaOrden = {
@@ -26,15 +30,23 @@ export default function Cart (){
         });
         nuevaOrden['totalOrden'] = totalOrden;
 
+        console.log(nuevaOrden)
+        guardoOrden("ordenes", nuevaOrden).then((data) => {
+          console.log('data ', data)
+          setidCompra(data)
+        });
+        
+        
 
-        const idNuevo = tomoId("ordenes");
+        /* const idNuevo = tomoId("ordenes");
         console.log ("idNuevo0: ",idNuevo)
-        /*guardoId(idNuevo, nuevaOrden);        
+       guardoId(idNuevo, nuevaOrden);        
         setidCompra(idNuevo);
         console.log ("idNuevo: ",idNuevo)
         console.log("Numero de Compra ",idCompra);*/
       };
-       
+      
+      
     return(
         <>
         <div><h2> Compras Realizadas </h2> </div>
@@ -45,9 +57,9 @@ export default function Cart (){
         cart.map((item)=>
             <CartItem key= {item.idArt} id={item.idArt} desc ={item.nomArt} cant={item.cantidad} preuni={item.preuni} ></CartItem>)}
 
-        {cantCarrito !== 0 && idCompra === " " && <div><h3> Total de la compra: {calculoTotal()}  </h3> </div>}
+        {cantCarrito !== 0 && <div><h3> Total de la compra: {calculoTotal()}  </h3> </div>}
         {cantCarrito !== 0 && idCompra === " " && <button onClick={hacerOrden}>Comprar</button>}
-        { idCompra !== " " && <FinalizoCompra id = {idCompra} />  }
+        { idCompra !== " " && <FinalizoCompra id={idCompra} />  }
         </>
     )
 } 
