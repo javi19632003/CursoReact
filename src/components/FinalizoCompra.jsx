@@ -5,7 +5,7 @@ import React, { useContext } from 'react';
 export default function FinalizoCompra ({id}) {
   
     const { clear } = useContext(Context)
-    console.log('id de finalizo ', id)
+
     return (
         <>
          <div>

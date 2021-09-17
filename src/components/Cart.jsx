@@ -23,6 +23,7 @@ const { cart, cantCarrito, calculoTotal } = useContext(Context)
           items: [],
           date: new Date().toString()
         };
+        
         let totalOrden = 0;
         cart.forEach(item => {
           nuevaOrden.items.push(item);
@@ -30,20 +31,10 @@ const { cart, cantCarrito, calculoTotal } = useContext(Context)
         });
         nuevaOrden['totalOrden'] = totalOrden;
 
-        console.log(nuevaOrden)
         guardoOrden("ordenes", nuevaOrden).then((data) => {
-          console.log('data ', data)
           setidCompra(data)
         });
         
-        
-
-        /* const idNuevo = tomoId("ordenes");
-        console.log ("idNuevo0: ",idNuevo)
-       guardoId(idNuevo, nuevaOrden);        
-        setidCompra(idNuevo);
-        console.log ("idNuevo: ",idNuevo)
-        console.log("Numero de Compra ",idCompra);*/
       };
       
       

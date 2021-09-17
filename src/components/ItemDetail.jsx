@@ -2,7 +2,6 @@
 
 import ItemCount from "./ItemCount";
 import React, { useContext, useState } from 'react';
-import  { Link } from "react-router-dom"
 import Cart from "./Cart";
 import { Context } from "../context/CartContext";
 import UnItem from "./UnItem";
@@ -19,16 +18,17 @@ export default function ItemDetail({desc, preuni, urlfoto, caract, stk, id}) {
 
   
    const agregar = (cantArti) => {
-    /*setAgregoCant(cantArti)*/
+
     setItemCountVisible(false)
     setFinalCompra(true)   
     addItem(id,desc,cantArti, preuni)
    } 
 
    const iraCart = () => {
-       setIrCart(true)
-       setFinalCompra(false) 
-       setItemVisible(false)   
+    
+    setIrCart(true)
+    setFinalCompra(false) 
+    setItemVisible(false)   
     }
 
     return( 
@@ -44,10 +44,7 @@ export default function ItemDetail({desc, preuni, urlfoto, caract, stk, id}) {
             {FinalCompra && 
                  <button onClick={()=> iraCart()} className="btn btn-warning">Finalizar Compra</button>
             }
-            {irCart && 
-                <Link to='/cart'>
-                    <Cart  />                    
-                </Link>
+            {irCart &&  <Cart  />                    
 
             }
 

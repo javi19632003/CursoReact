@@ -2,7 +2,7 @@ import{ Link } from 'react-router-dom'
 
 export default function Item({desc, preuni, urlfoto, cate, id}) {
     const currency = function(number){
-        return new Intl.NumberFormat('en-IN', {style: 'currency',currency: 'INR', minimumFractionDigits: 2}).format(number);
+        return new Intl.NumberFormat('es-AR', {style: 'currency',currency: 'USD', minimumFractionDigits: 2}).format(number);
     };
  
     return (

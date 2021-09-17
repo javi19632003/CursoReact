@@ -26,39 +26,26 @@ export const todos = ()  => {
 };
 
 export const produxcate = (cate)  => {
-   const q0 = collection(db, "productos");
- const q1 = query(q0, where('cate', '==', cate) ); 
- const q2 = getDocs(q1);
+  const q0 = collection(db, "productos");
+  const q1 = query(q0, where('cate', '==', cate) ); 
+  const q2 = getDocs(q1);
   return q2
 };
 
 export const unProducto = (id) => {
   const uno0 = doc(db, 'productos', id);
-   const uno1 = getDoc(uno0);
+  const uno1 = getDoc(uno0);
   return uno1
 }
 
 export const tomoId = (dataBase) => {
-  
-  console.log ("database: ",dataBase)
-  
+
   const nuevoId = doc(collection(db, dataBase));
-  console.log ("nuevoId: ",nuevoId.id)
   return nuevoId.id
 }
 
 export const guardoOrden = async (dataBase, data) => {
 
   const retorno = await addDoc(collection(db, dataBase), data)
-  console.log ("nuevoId: ",retorno.id)
   return  retorno.id  
  }
-
-
-/*export const guardoOrden = async (id, data) => {
- 
-  await setDoc(id, data);
- }*/
-
-/* 
-        */
